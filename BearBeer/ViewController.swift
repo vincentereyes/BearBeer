@@ -8,13 +8,24 @@
 
 import UIKit
 import CoreMotion
+import AVFoundation
 
 class ViewController: UIViewController {
+    var music: AVAudioPlayer = AVAudioPlayer()
 
     var motionManager = CMMotionManager()
     let opQueue = OperationQueue()
     
     @IBOutlet weak var lbl: UILabel!
+    
+    
+    @IBAction func reset(_ sender: UIButton) {
+        viewDidLoad()
+        time = 0.0
+        lbl.text = "0.0"
+    }
+    
+    
     
     var time = 0.0
     var timer = Timer()
@@ -28,9 +39,11 @@ class ViewController: UIViewController {
         if boolVariable {
             time += 0.1
             lbl.text = String(format: "%.1f", time)
+            music.play()
         } else {
             time += 0.0
             lbl.text = String(format: "%.1f", time)
+            music.stop()
         }
     }
     
@@ -73,6 +86,14 @@ class ViewController: UIViewController {
         else {
             print("We cannot detect device motion")
         }
+        let musicFile = Bundle.main.path(forResource: "7454", ofType: ".mp3")
+        do {
+            try music = AVAudioPlayer(contentsOf: URL (fileURLWithPath: musicFile!))
+        }
+        catch {
+            print(error)
+        }
+        
     }
     
     

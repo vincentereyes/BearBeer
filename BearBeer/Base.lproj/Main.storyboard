@@ -18,15 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saj-O2-oHn">
-                                <rect key="frame" x="100" y="66" width="174" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgbear.png" translatesAutoresizingMaskIntoConstraints="NO" id="z24-aB-dR6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saj-O2-oHn">
+                                <rect key="frame" x="64" y="107" width="247" height="122"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="87"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgz-Jw-Oc2">
+                                <rect key="frame" x="66" y="580" width="242" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.037429042764917875" blue="0.0" alpha="0.30637307366986294" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <state key="normal" title="ANOTHA ONE">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jnV-j7-lvA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="saj-O2-oHn" secondAttribute="bottom" constant="438" id="AXg-WD-GK4"/>
+                            <constraint firstItem="saj-O2-oHn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="E4e-Zp-l4O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="saj-O2-oHn" secondAttribute="trailing" constant="64" id="LV0-cc-UFY"/>
+                            <constraint firstItem="saj-O2-oHn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="Wey-47-ns9"/>
+                            <constraint firstItem="z24-aB-dR6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XDM-sC-TdD"/>
+                            <constraint firstItem="z24-aB-dR6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bCz-Dr-d2W"/>
+                            <constraint firstItem="z24-aB-dR6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fiP-uj-nEk"/>
+                            <constraint firstItem="z24-aB-dR6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oyJ-hA-KTE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -38,4 +62,7 @@
             <point key="canvasLocation" x="128.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bgbear.png" width="730" height="1334"/>
+    </resources>
 </document>

@@ -13,6 +13,10 @@
 		C4955F8420522C96006AE1E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4955F8320522C96006AE1E3 /* Assets.xcassets */; };
 		C4955F8720522C96006AE1E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4955F8520522C96006AE1E3 /* LaunchScreen.storyboard */; };
 		C4955F9020523010006AE1E3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4955F8F20523010006AE1E3 /* CoreMotion.framework */; };
+		C4955F9420525371006AE1E3 /* loadingbear.png in Resources */ = {isa = PBXBuildFile; fileRef = C4955F9120525371006AE1E3 /* loadingbear.png */; };
+		C4955F9520525371006AE1E3 /* 7454.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4955F9220525371006AE1E3 /* 7454.mp3 */; };
+		C4955F9620525371006AE1E3 /* bgbear.png in Resources */ = {isa = PBXBuildFile; fileRef = C4955F9320525371006AE1E3 /* bgbear.png */; };
+		C4955F9820525435006AE1E3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4955F9720525435006AE1E3 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C4955F8620522C96006AE1E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4955F8820522C96006AE1E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4955F8F20523010006AE1E3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		C4955F9120525371006AE1E3 /* loadingbear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loadingbear.png; path = ../../../../loadingbear.png; sourceTree = "<group>"; };
+		C4955F9220525371006AE1E3 /* 7454.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 7454.mp3; path = ../../../../7454.mp3; sourceTree = "<group>"; };
+		C4955F9320525371006AE1E3 /* bgbear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bgbear.png; path = ../../../../bgbear.png; sourceTree = "<group>"; };
+		C4955F9720525435006AE1E3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4955F9820525435006AE1E3 /* AVFoundation.framework in Frameworks */,
 				C4955F9020523010006AE1E3 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +70,9 @@
 				C4955F7C20522C96006AE1E3 /* AppDelegate.swift */,
 				C4955F7E20522C96006AE1E3 /* ViewController.swift */,
 				C4955F8020522C96006AE1E3 /* Main.storyboard */,
+				C4955F9220525371006AE1E3 /* 7454.mp3 */,
+				C4955F9320525371006AE1E3 /* bgbear.png */,
+				C4955F9120525371006AE1E3 /* loadingbear.png */,
 				C4955F8320522C96006AE1E3 /* Assets.xcassets */,
 				C4955F8520522C96006AE1E3 /* LaunchScreen.storyboard */,
 				C4955F8820522C96006AE1E3 /* Info.plist */,
@@ -71,6 +83,7 @@
 		C4955F8E20523010006AE1E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4955F9720525435006AE1E3 /* AVFoundation.framework */,
 				C4955F8F20523010006AE1E3 /* CoreMotion.framework */,
 			);
 			name = Frameworks;
@@ -135,8 +148,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4955F9620525371006AE1E3 /* bgbear.png in Resources */,
 				C4955F8720522C96006AE1E3 /* LaunchScreen.storyboard in Resources */,
 				C4955F8420522C96006AE1E3 /* Assets.xcassets in Resources */,
+				C4955F9520525371006AE1E3 /* 7454.mp3 in Resources */,
+				C4955F9420525371006AE1E3 /* loadingbear.png in Resources */,
 				C4955F8220522C96006AE1E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
