@@ -18,17 +18,49 @@ class ViewController: UIViewController {
     
     var time = 0.0
     var timer = Timer()
+    var boolVariable: Bool = false
     
     func start() {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.action), userInfo: nil, repeats: true)
     }
     
     @objc func action(){
-        time += 0.1
-        lbl.text = String(format: "%.1f", time)
+        if boolVariable {
+            time += 0.1
+            lbl.text = String(format: "%.1f", time)
+        } else {
+            time += 0.0
+            lbl.text = String(format: "%.1f", time)
+        }
     }
     
 
+    func startReadingMotionData() {
+        // set read speed
+        motionManager.deviceMotionUpdateInterval = 1
+        // start reading
+        motionManager.startDeviceMotionUpdates(to: opQueue) {
+            (data: CMDeviceMotion?, error: Error?) in
+            
+            if let mydata = data {
+                print("mydata", mydata.gravity.x)
+                //                print("pitch raw", mydata.attitude.pitch)
+                //                print("pitch", self.degrees(mydata.attitude.pitch))
+                
+                if mydata.gravity.x < (-0.86){
+                    self.boolVariable = true
+                } else {
+                    self.boolVariable = false
+                }
+            }
+        }
+    }
+    
+    
+    func degrees(_ radians: Double) -> Double {
+        return 180/Double.pi * radians
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,35 +74,13 @@ class ViewController: UIViewController {
             print("We cannot detect device motion")
         }
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func startReadingMotionData() {
-        // set read speed
-        motionManager.deviceMotionUpdateInterval = 1
-        // start reading
-        motionManager.startDeviceMotionUpdates(to: opQueue) {
-            (data: CMDeviceMotion?, error: Error?) in
-            
-            if let mydata = data {
-                print("mydata", mydata.gravity.x)
-                //                print("pitch raw", mydata.attitude.pitch)
-                //                print("pitch", self.degrees(mydata.attitude.pitch))
-                
-                if mydata.gravity.x < -0.86{
-                    self.start()
-                }
-            }
-        }
-    }
-    
-    
-    func degrees(_ radians: Double) -> Double {
-        return 180/Double.pi * radians
-    }
 
 }
 
